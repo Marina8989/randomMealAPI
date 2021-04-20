@@ -16,12 +16,9 @@ async function getMeal() {
       console.log(data);
       mealName.innerText = data.meals[0].strMeal;
       mealImage.src = data.meals[0].strMealThumb;
-
+      mealInstruction.innerText = data.meals[0].strInstructions;
+     
   }
 
 
-
-
-
-
-getMeal();
+  mealBtn.addEventListener('click', getMeal);
